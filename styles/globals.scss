@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply transition duration-700 cursor-pointer hover:text-pink-600;
+  }
+}
+
 body {
   background-color: #f4f4f4;
+}
+
+.content {
+  h3 {
+    margin: 1.5em 0 0.5em;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  img {
+    border-radius: 8px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }

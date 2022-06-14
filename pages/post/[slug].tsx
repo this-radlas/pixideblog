@@ -1,18 +1,19 @@
 import React from "react";
 import { getPosts, getPostDetails } from "../../services";
-import { PostDetail, Categories, Author } from "../../components";
+import { PostDetail, Categories, Author, PostWidget } from "../../components";
 
 const PostDetails = ({ post }) => {
   return (
-    <div className="container mx-auto px-10 mb-10">
-      <div className="grid grid-cols-1 ls:grid-cols-12 gap-12">
-        <div className="col-span-1 lg:col-span-8">
+    <div className="container mx-auto px-5 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-8 col-span-1">
           <PostDetail post={post} />
-          <Author author={post.author} />
+          {post.author && <Author author={post.author} />}
         </div>
-        <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8">
-            <Categories categories={post.categories} />
+        <div className="lg:col-span-4 col-span-1">
+          <div className="lg:sticky relative top-8">
+            {post.categories && <Categories categories={post.categories} />}
+            <PostWidget />
           </div>
         </div>
       </div>
