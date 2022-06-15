@@ -3,16 +3,12 @@ import Link from "next/link";
 import { getRecentPosts, getSimilarPosts } from "../services";
 import moment from "moment";
 
-const PostWidget = ({ categories, slug }) => {
+const PostWidget = ({ slug }: { slug: any }) => {
   const [relatedPosts, setRelatedPosts] = useState([] as any[]);
 
   useEffect(() => {
-    if (slug) {
-      getSimilarPosts(category, slug).then((result) => setRelatedPosts(result));
-    } else {
-      getRecentPosts().then((result) => setRelatedPosts(result));
-    }
-  }, [slug]);
+    getRecentPosts().then((result) => setRelatedPosts(result));
+  });
 
   return (
     <div className="shadow-lg rounded-lg p-6 mb-8 bg-white">

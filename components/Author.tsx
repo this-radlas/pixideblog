@@ -1,9 +1,9 @@
 import React from "react";
 
-const Author = ({ author }) => {
+const Author = ({ author }: { author: any }) => {
   console.log(author);
   return (
-    <div class="bg-white shadow-lg rounded-lg p-6  flex items-center mt-5">
+    <div className="bg-white shadow-lg rounded-lg p-6  flex items-center mt-5">
       <div className="flex-none mr-6">
         <img width="65px" height="65px" className="rounded-full" src={author.photo.url} alt={author.name} />
       </div>

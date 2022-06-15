@@ -29,7 +29,7 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             ) : (
-              <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+              <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
                 <path
                   d="M4.722 3.295l4.277 4.278 4.28-4.278a1.008 1.008 0 011.426 1.427l-4.279 4.277 4.279 4.28a1.008 1.008 0 01-1.427 1.426L9 10.426l-4.277 4.279a1.008 1.008 0 01-1.427-1.427L7.573 9 3.295 4.722a1.008 1.008 0 011.427-1.427z"
                   fill="#333"

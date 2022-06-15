@@ -12,8 +12,8 @@ const PostDetails = ({ post }) => {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
-            {post.categories && <Categories categories={post.categories} />}
-            <PostWidget />
+            {post.categories && <Categories />}
+            <PostWidget slug="" />
           </div>
         </div>
       </div>

@@ -4,7 +4,8 @@ import { getPosts } from "../services";
 
 export default function Home({ posts }: { posts: any }) {
   return (
-    <div className="container mx-auto px-5
+    <div
+      className="container mx-auto px-5
      mb-8">
       <Head>
         <title>Blog</title>
@@ -13,7 +14,7 @@ export default function Home({ posts }: { posts: any }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {posts.map((post: Object, index: any) => (
+          {posts.map((post: any) => (
             <PostCard post={post.node} key={post.title} />
           ))}
         </div>
@@ -21,7 +22,7 @@ export default function Home({ posts }: { posts: any }) {
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
             <Categories />
-            <PostWidget />
+            <PostWidget slug="" />
             <FeaturedCard />
           </div>
         </div>
