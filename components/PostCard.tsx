@@ -3,8 +3,6 @@ import moment from "moment";
 import Link from "next/link";
 
 const PostCard = ({ post }: { post: any }) => {
-  console.log(post);
-
   return (
     <div className="shadow-lg rounded-lg p-0 pb-12 mb-8 bg-white">
       <div className="relative overflow-hidden pb-80 mb-10 cursor-pointer">

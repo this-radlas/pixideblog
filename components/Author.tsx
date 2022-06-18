@@ -1,7 +1,6 @@
 import React from "react";
 
 const Author = ({ author }: { author: any }) => {
-  console.log(author);
   return (
     <div className="bg-white shadow-lg rounded-lg p-6  flex items-center mt-5">
       <div className="flex-none mr-6">
