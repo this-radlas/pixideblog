@@ -11,10 +11,7 @@ const PostDetails = ({ post }) => {
           {post.author && <Author author={post.author} />}
         </div>
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
-            {post.categories && <Categories />}
-            <PostWidget slug="" />
-          </div>
+          <div className="lg:sticky relative top-8">{post.categories && <Categories />}</div>
         </div>
       </div>
     </div>
@@ -26,13 +23,14 @@ export default PostDetails;
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
   return {
-    props: { post: data },
+    props: {
+      post: data,
+    },
   };
 }
 
 export async function getStaticPaths() {
   const posts = await getPosts();
-
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: false,

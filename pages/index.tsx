@@ -22,15 +22,12 @@ export default function Home({ posts }: { posts: any }) {
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
             <Categories />
-            <PostWidget slug="" />
-            <FeaturedCard />
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   return {
