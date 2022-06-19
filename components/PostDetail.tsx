@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 
-const PostDetail = ({ post }) => {
+const PostDetail = ({ post }: { post: any }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg">
       <div className="relative overflow-hidden">

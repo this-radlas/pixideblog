@@ -3,7 +3,7 @@ import React from "react";
 import { getCategories, getCategoryPost } from "../../services";
 import { PostCard, Categories } from "../../components";
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts }: { posts: any }) => {
   return (
     <div className="container mx-auto px-6 mb-6">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
